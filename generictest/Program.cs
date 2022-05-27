@@ -11,6 +11,7 @@ namespace generictest
             Console.WriteLine("2. Find maximum among three floats");
             Console.WriteLine("3. Find maximum among three strings");
             Console.WriteLine("4. Find maximum among int, float, string using generic method");
+            Console.WriteLine("5. Find max among three using generic class");
             Console.Write("Enter your choice : ");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -70,6 +71,20 @@ namespace generictest
                     Console.WriteLine("Maximum string is : " + maxAmongThreeGeneric.MaxAmongThree("3", "2", "1"));
                     Console.WriteLine("Maximum string is : " + maxAmongThreeGeneric.MaxAmongThree("1", "3", "2"));
                     Console.WriteLine("Maximum string is : " + maxAmongThreeGeneric.MaxAmongThree("1", "2", "3"));
+                    break;
+
+                case 5:
+                    //Test case for Integer
+                    MaxAmongThreeGenericClass<int> maxInt = new MaxAmongThreeGenericClass<int>(1, 2, 3);
+                    Console.WriteLine("Maximum integer is : " + maxInt.TestMaximum());
+
+                    //Test case for Float
+                    MaxAmongThreeGenericClass<float> maxFloat = new MaxAmongThreeGenericClass<float>(1.1f, 2.1f, 3.1f);
+                    Console.WriteLine("Maximum float is : " + maxFloat.TestMaximum());
+
+                    //Test case for String
+                    MaxAmongThreeGenericClass<string> maxString = new MaxAmongThreeGenericClass<string>("a", "aa", "aaa");
+                    Console.WriteLine("Maximum string is : " + maxString.TestMaximum());
                     break;
 
                 default:
