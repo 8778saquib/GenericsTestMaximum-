@@ -13,6 +13,7 @@ namespace generictest
             Console.WriteLine("4. Find maximum among int, float, string using generic method");
             Console.WriteLine("5. Find max among three using generic class");
             Console.WriteLine("6. Find max from more than three parameters using generic class");
+            Console.WriteLine("7. Find max and print using generic method");
             Console.Write("Enter your choice : ");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -102,6 +103,22 @@ namespace generictest
                     string[] stringArray = { "a", "aa", "aaaaa", "aaa", "aaaa" };
                     MaxAmongMoreThanThree<string> moreThanThreeString = new MaxAmongMoreThanThree<string>(stringArray);
                     Console.WriteLine("Maximum value is : " + moreThanThreeString.FindMaxMethod());
+                    break;
+                case 7:
+                    //Test case for Integer
+                    int[] intArrayPrint = { 1, 2, 3, 5, 4 };
+                    MaxAmongMoreThanThree<int> printInt = new MaxAmongMoreThanThree<int>(intArrayPrint);
+                    printInt.PrintMax();
+
+                    //Test case for Float
+                    float[] floatArrayPrint = { 1.1f, 5.5f, 2.2f, 3.3f, 4.4f };
+                    MaxAmongMoreThanThree<float> printFloat = new MaxAmongMoreThanThree<float>(floatArrayPrint);
+                    printFloat.PrintMax();
+
+                    //Test case for String
+                    string[] stringArrayPrint = { "a", "aa", "aaa", "aaaaa", "aaaa" };
+                    MaxAmongMoreThanThree<string> printString = new MaxAmongMoreThanThree<string>(stringArrayPrint);
+                    printString.PrintMax();
                     break;
 
                 default:
